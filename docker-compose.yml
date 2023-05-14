@@ -5,6 +5,7 @@ version: "3.8"
 services:
   # mongodb nimi
   mymongodb:
+    image: "mongo"
     # Julkinen mongodb portti
     ports:
       - 27017:27017
@@ -30,8 +31,6 @@ services:
     ports:
       - 3000:3000
     stdin_open: true
-    volumes:
-      - ./frontend/src:/app/src
     tty: true
     extra_hosts:
       - host.docker.internal:host-gateway
